@@ -19,11 +19,13 @@ public class SubForo {
     private ArrayList<Usuario> listaUsuarios = new ArrayList<>();
     
     public boolean vistoBueno(Entrada e){
-                
+        boolean bool = true;
+        return bool;
     }
     
-    public Notificacion crearNotificacion(idEntrada id){
-        
+    public Notificacion crearNotificacion(Entrada id){
+        Notificacion n = new Notificacion();
+        return n;
     }
     
     public void suscribirUsuario(Usuario u){
