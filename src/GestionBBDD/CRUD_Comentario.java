@@ -10,5 +10,17 @@ package GestionBBDD;
  * @author Angel Dominguez
  */
 public class CRUD_Comentario {
+    public Boolean insertarComentario(){
+        return true;
+    }
     
+    public Boolean actualizarComentario(){
+        return true;
+    }
+    public Boolean seleccionarComentario(){
+        return true;
+    }
+    public Boolean borrarComentario(){
+        return true;
+    }
 }
