@@ -1,26 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GestionBBDD;
 
-/**
- *
- * @author Angel Dominguez
- */
+import Clases.Entrada;
+
 public class CRUD_Entrada {
-    public Boolean insertarEntrada(){
+    public Boolean insertarEntrada(Entrada entrada){
         return true;
     }
-    
-    public Boolean actualizarEntrada(){
+    public Boolean actualizarEntrada(Entrada entrada){
         return true;
     }
-    public Boolean seleccionarEntrada(){
+    public Boolean seleccionarEntrada(Entrada entrada){
         return true;
     }
-    public Boolean borrarEntrada(){
+    public Boolean borrarEntrada(Entrada entrada){
         return true;
     }
 }

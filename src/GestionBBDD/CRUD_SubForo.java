@@ -5,22 +5,23 @@
  */
 package GestionBBDD;
 
+import Clases.SubForo;
+
 /**
  *
  * @author Angel Dominguez
  */
 public class CRUD_SubForo {
-    public Boolean insertarSubForo(){
+    public Boolean insertarSubForo(SubForo subForo){
+        return true;
+    }  
+    public Boolean actualizarSubForo(SubForo subForo){
         return true;
     }
-    
-    public Boolean actualizarSubForo(){
+    public Boolean seleccionarSubForo(SubForo subForo){
         return true;
     }
-    public Boolean seleccionarSubForo(){
-        return true;
-    }
-    public Boolean borrarSubForo(){
+    public Boolean borrarSubForo(SubForo subForo){
         return true;
     }
 }

@@ -13,7 +13,6 @@ public class GestionBBDD {
     public Boolean insertarBBDD(){
         return true;
     }
-    
     public Boolean actualizarBBDD(){
         return true;
     }
