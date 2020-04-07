@@ -10,5 +10,17 @@ package GestionBBDD;
  * @author Angel Dominguez
  */
 public class CRUD_SubForo {
+    public Boolean insertarSubForo(){
+        return true;
+    }
     
+    public Boolean actualizarSubForo(){
+        return true;
+    }
+    public Boolean seleccionarSubForo(){
+        return true;
+    }
+    public Boolean borrarSubForo(){
+        return true;
+    }
 }
