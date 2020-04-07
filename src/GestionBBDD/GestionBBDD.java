@@ -10,5 +10,16 @@ package GestionBBDD;
  * @author Angel Dominguez
  */
 public class GestionBBDD {
-    
+    public Boolean insertarBBDD(){
+        return true;
+    }
+    public Boolean actualizarBBDD(){
+        return true;
+    }
+    public Boolean seleccionarBBDD(){
+        return true;
+    }
+    public Boolean borrarBBDD(){
+        return true;
+    }
 }
