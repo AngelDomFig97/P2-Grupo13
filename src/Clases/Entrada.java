@@ -21,6 +21,86 @@ public class Entrada {
     private SubForo subforo;
     private Encuesta encuesta;
     private Ejercicio ejercicio;
+
+    public String getIdEntrada() {
+        return idEntrada;
+    }
+
+    public void setIdEntrada(String idEntrada) {
+        this.idEntrada = idEntrada;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getContenidoEntrada() {
+        return contenidoEntrada;
+    }
+
+    public void setContenidoEntrada(String contenidoEntrada) {
+        this.contenidoEntrada = contenidoEntrada;
+    }
+
+    public Integer getPuntuacion() {
+        return puntuacion;
+    }
+
+    public void setPuntuacion(Integer puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(Date fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
+    public Date getFechaUpdate() {
+        return fechaUpdate;
+    }
+
+    public void setFechaUpdate(Date fechaUpdate) {
+        this.fechaUpdate = fechaUpdate;
+    }
+
+    public ArrayList<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(ArrayList<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    public SubForo getSubforo() {
+        return subforo;
+    }
+
+    public void setSubforo(SubForo subforo) {
+        this.subforo = subforo;
+    }
+
+    public Encuesta getEncuesta() {
+        return encuesta;
+    }
+
+    public void setEncuesta(Encuesta encuesta) {
+        this.encuesta = encuesta;
+    }
+
+    public Ejercicio getEjercicio() {
+        return ejercicio;
+    }
+
+    public void setEjercicio(Ejercicio ejercicio) {
+        this.ejercicio = ejercicio;
+    }
     
     
     public ArrayList<Entrada> selectEntradasPopulares(){
@@ -28,6 +108,7 @@ public class Entrada {
         return null;
     }
     public Entrada rellenarEntrada(){
+        
         
         return null;
     }
