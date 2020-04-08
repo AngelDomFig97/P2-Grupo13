@@ -1,14 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Clases;
 
-/**
- *
- * @author Angel Dominguez
- */
+package Clases;
+        
+
 public class Usuario {
     
+    private String name, surname, nick, password, email, userType;
+    private boolean penalized;
+    
+    public boolean isUserUrjc(Usuario user) {
+    
+        return false;        
+    }
+    
+    public String typeUser(Usuario user) {
+        
+        return null;
+    }
+    
+    public void setUserType(String type) {
+        
+        this.userType = type;
+          
+    }
+    
+    public void penalizeUser() {
+        penalized = true;
+    }
 }
