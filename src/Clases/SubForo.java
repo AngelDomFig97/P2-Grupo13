@@ -27,16 +27,16 @@ public class SubForo {
     }
     
     public Notificacion crearNotificacion(Entrada id, SubForo subf, String texto, Date fecha){
-        Notificacion n = new Notificacion();
-        n.setEntrada(id);
-        n.setSubForo(subf);
-        n.setFechaNotificacion(fecha);
-        n.setTexto(texto);
+        Notificacion n = new Notificacion(texto, fecha, subf, id);
         return n;
     }
     
-    public void suscribirUsuario(Usuario user){
-        listaUsuarios.add(user); 
+    public void anadirEntrada(Entrada e){
+        listaEntradas.add(e);
+    }
+    
+    public void suscribirUsuario(Usuario u){
+        listaUsuarios.add(u); 
     }
     
     public void darBajaUsuario(Usuario user){

@@ -10,6 +10,5 @@ public class Demostrador {
     public static void main(String[] args) {
         ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarUsuario();
         ArrayList<SubForo> listaSubForos = CRUD_SubForo.seleccionarSubForo();
-
     }   
 }
