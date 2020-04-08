@@ -10,6 +10,13 @@ public class Notificacion {
     private SubForo subForo;
     private Entrada  entrada;
 
+    public Notificacion(String texto, Date fechaNotificacion, SubForo subForo, Entrada entrada) {
+        this.texto = texto;
+        this.fechaNotificacion = fechaNotificacion;
+        this.subForo = subForo;
+        this.entrada = entrada;
+    }
+
     public String getTexto() {
         return texto;
     }
