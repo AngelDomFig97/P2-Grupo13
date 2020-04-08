@@ -77,6 +77,10 @@ public class Entrada {
     public void setComentarios(ArrayList<Comentario> comentarios) {
         this.comentarios = comentarios;
     }
+    
+    public void anadirComentario(Comentario comentario){
+        comentarios.add(comentario);
+    }
 
     public SubForo getSubforo() {
         return subforo;
