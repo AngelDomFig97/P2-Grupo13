@@ -107,10 +107,16 @@ public class Entrada {
         
         return null;
     }
-    public Entrada rellenarEntrada(){
-        
-        
-        return null;
+
+    public Entrada(String titulo, String contenidoEntrada, Integer puntuacion, Date fechaCreacion, Date fechaUpdate, ArrayList<Comentario> comentarios, SubForo subforo, Ejercicio ejercicio) {
+        this.titulo = titulo;
+        this.contenidoEntrada = contenidoEntrada;
+        this.puntuacion = puntuacion;
+        this.fechaCreacion = fechaCreacion;
+        this.fechaUpdate = fechaUpdate;
+        this.comentarios = comentarios;
+        this.subforo = subforo;
+        this.ejercicio = ejercicio;
     }
     public Entrada rellenarEntradaProfesor(){
         
