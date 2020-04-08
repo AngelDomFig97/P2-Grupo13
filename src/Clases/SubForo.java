@@ -14,19 +14,16 @@ import java.util.Date;
  */
 public class SubForo {
     
-    private String nombre;
-    private int id_Profesor;
+    private String nombreForo;
+    private String nickCreador;
     private ArrayList<Entrada> listaEntradas = new ArrayList<>();
     private ArrayList<Usuario> listaUsuarios = new ArrayList<>();
     
-    public SubForo(String nombre, int id_Profesor){
-        this.nombre = nombre;
-        this.id_Profesor = id_Profesor;
+    public SubForo(){
     }
     
-    public boolean vistoBueno(boolean torf){
-        boolean bool = torf;
-        return bool;
+    public boolean vistoBueno(Entrada nuevaEntrada){
+        return true;
     }
     
     public Notificacion crearNotificacion(Entrada id, SubForo subf, String texto, Date fecha){
@@ -38,11 +35,45 @@ public class SubForo {
         return n;
     }
     
-    public void suscribirUsuario(Usuario u){
-        listaUsuarios.add(u); 
+    public void suscribirUsuario(Usuario user){
+        listaUsuarios.add(user); 
     }
     
-    public void darBajaUsuario(Usuario u){
-        listaUsuarios.remove(u);
+    public void darBajaUsuario(Usuario user){
+        listaUsuarios.remove(user);
     }
+
+    public String getNombreForo() {
+        return nombreForo;
+    }
+
+    public void setNombreForo(String nombreForo) {
+        this.nombreForo = nombreForo;
+    }
+
+    public String getNickCreador() {
+        return nickCreador;
+    }
+
+    public void setNickCreador(String nickCreador) {
+        this.nickCreador = nickCreador;
+    }
+
+    public ArrayList<Entrada> getListaEntradas() {
+        return listaEntradas;
+    }
+
+    public void setListaEntradas(ArrayList<Entrada> listaEntradas) {
+        this.listaEntradas = listaEntradas;
+    }
+
+    public ArrayList<Usuario> getListaUsuarios() {
+        return listaUsuarios;
+    }
+
+    public void setListaUsuarios(ArrayList<Usuario> listaUsuarios) {
+        this.listaUsuarios = listaUsuarios;
+    }
+    
+    
 }

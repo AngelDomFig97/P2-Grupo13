@@ -1,5 +1,6 @@
 package Clases;
 
+import GestionBBDD.CRUD_SubForo;
 import GestionBBDD.CRUD_Usuario;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,6 +9,7 @@ public class Web {
     
     private String mensajePopUp;
     public Date fecha;
+    public ArrayList<Entrada> listaEntradasPopulares = new ArrayList<>();
 
     public String getMensajePopUp() {
         return mensajePopUp;
@@ -23,7 +25,7 @@ public class Web {
     }
    
     public Boolean iniciarSesion (String nick, String contraseña){
-        ArrayList<Usuario> listaUsuarios = CRUD_Usuario.selectUsuario();
+        ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarUsuario();
         for (Usuario usuarioActual : listaUsuarios){
             if (usuarioActual.getNick().equals(nick)){
                 if (usuarioActual.getContraseña().equals(contraseña))
@@ -33,6 +35,11 @@ public class Web {
             }
         }   
         return false;
+    }
+    
+    public void crearSubForo (ArrayList<SubForo> listaSubForos, SubForo nuevoSubForo){
+        listaSubForos.add(nuevoSubForo);
+        CRUD_SubForo.insertarSubForo(listaSubForos);
     }
     
     public Entrada mostrarEntradasPopulares (){
