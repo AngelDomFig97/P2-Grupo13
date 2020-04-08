@@ -1,30 +1,14 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Clases;
 
-import java.util.ArrayList;
-
+/**
+ *
+ * @author Angel Dominguez
+ */
 public class Encuesta {
-    
-     private ArrayList<String> preguntasYrespuestas = new ArrayList<>(); 
-
-    public ArrayList<String> getPreguntasYrespuestas() {
-        return preguntasYrespuestas;
-    }
-
-    public void setPreguntasYrespuestas(ArrayList<String> preguntasYrespuestas) {
-        this.preguntasYrespuestas = preguntasYrespuestas;
-    }
-      
-     
-     
-     
-     
-     public Encuesta generarEncuesta(){
-         return null;
-        
-    }
-      
-    
-    
     
 }
