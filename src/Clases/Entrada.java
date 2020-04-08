@@ -17,7 +17,7 @@ public class Entrada {
     private String idEntrada,titulo,contenidoEntrada;
     private Integer puntuacion;
     private Date fechaCreacion, fechaUpdate;
-    private ArrayList<Comentario> comentarios;
+    private ArrayList<Comentario> comentarios = new ArrayList<>();
     private SubForo subforo;
     private Encuesta encuesta;
     private Ejercicio ejercicio;
@@ -112,7 +112,7 @@ public class Entrada {
         return null;
     }
 
-    public Entrada rellenarEntrada(String titulo, String contenidoEntrada, Integer puntuacion, Date fechaCreacion, Date fechaUpdate, ArrayList<Comentario> comentarios, SubForo subforo) {
+    public Entrada rellenarEntrada(String titulo, String contenidoEntrada, int puntuacion, Date fechaCreacion, Date fechaUpdate, ArrayList<Comentario> comentarios, SubForo subforo) {
         this.titulo = titulo;
         this.contenidoEntrada = contenidoEntrada;
         this.puntuacion = puntuacion;
@@ -123,7 +123,7 @@ public class Entrada {
         return null;
     }
 
-    public Entrada rellenarEntradaProfesor(String titulo, String contenidoEntrada, Integer puntuacion, Date fechaCreacion, Date fechaUpdate, ArrayList<Comentario> comentarios, SubForo subforo, Encuesta encuesta, Ejercicio ejercicio) {
+    public Entrada rellenarEntradaProfesor(String titulo, String contenidoEntrada, int puntuacion, Date fechaCreacion, Date fechaUpdate, ArrayList<Comentario> comentarios, SubForo subforo, Encuesta encuesta, Ejercicio ejercicio) {
         this.titulo = titulo;
         this.contenidoEntrada = contenidoEntrada;
         this.puntuacion = puntuacion;
