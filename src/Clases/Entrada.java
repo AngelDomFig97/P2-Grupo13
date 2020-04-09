@@ -112,16 +112,9 @@ public class Entrada {
         return null;
     }
 
-    public Entrada rellenarEntrada(String titulo, String contenidoEntrada, int puntuacion, Date fechaCreacion, Date fechaUpdate, ArrayList<Comentario> comentarios, SubForo subforo) {
-        this.titulo = titulo;
-        this.contenidoEntrada = contenidoEntrada;
-        this.puntuacion = puntuacion;
-        this.fechaCreacion = fechaCreacion;
-        this.fechaUpdate = fechaUpdate;
-        this.comentarios = comentarios;
-        this.subforo = subforo;
-        return null;
+    public Entrada() {
     }
+    
 
     public Entrada rellenarEntradaProfesor(String titulo, String contenidoEntrada, int puntuacion, Date fechaCreacion, Date fechaUpdate, ArrayList<Comentario> comentarios, SubForo subforo, Encuesta encuesta, Ejercicio ejercicio) {
         this.titulo = titulo;
