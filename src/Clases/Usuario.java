@@ -14,15 +14,16 @@ public class Usuario implements Serializable{
     public Usuario (){   
     }
     
-    private boolean esUserURJC (Usuario user){
+    private boolean esUserURJC (Usuario user) {
         return true;
     }
     
-    private boolean tipoUsuario (Usuario user){
+    private boolean tipoUsuario (Usuario user) {
         return true;
     }
     
-    public void penalizarUsuario (){       
+    public void penalizarUsuario (Usuario user) {  
+        user.penalizado = true;
     }
 
     public String getNombre() {
