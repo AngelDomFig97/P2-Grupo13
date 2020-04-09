@@ -1,6 +1,5 @@
 package Clases;
 
-import GestionBBDD.CRUD_SubForo;
 import GestionBBDD.CRUD_Usuario;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,11 +34,6 @@ public class Web {
             }
         }   
         return false;
-    }
-    
-    public void crearSubForo (ArrayList<SubForo> listaSubForos, SubForo nuevoSubForo){
-        listaSubForos.add(nuevoSubForo);
-        CRUD_SubForo.insertarSubForo(listaSubForos);
     }
     
     public Entrada mostrarEntradasPopulares (){
