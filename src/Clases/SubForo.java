@@ -5,6 +5,7 @@
  */
 package Clases;
 
+import GestionBBDD.CRUD_SubForo;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -31,16 +32,17 @@ public class SubForo {
         return n;
     }
     
+    public void crearSubForo (ArrayList<SubForo> listaSubForos, SubForo nuevoSubForo){
+        listaSubForos.add(nuevoSubForo);
+        CRUD_SubForo.insertarSubForo(listaSubForos);
+    }
+    
     public void anadirEntrada(Entrada e){
         listaEntradas.add(e);
     }
     
     public void suscribirUsuario(Usuario u){
         listaUsuarios.add(u); 
-    }
-    
-    public void darBajaUsuario(Usuario user){
-        listaUsuarios.remove(user);
     }
 
     public String getNombreForo() {
