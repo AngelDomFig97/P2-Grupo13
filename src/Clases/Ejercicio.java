@@ -1,13 +1,17 @@
 
 package Clases;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
+import sun.misc.IOUtils;
 
 
 public class Ejercicio {
   
     private String textoEjercicio;   
-    private ArrayList<Byte> imagen = new ArrayList<>();
+    private ArrayList<Byte> imagen = new ArrayList<Byte>();
 
     public String getTextoEjercicio() {
         return textoEjercicio;
@@ -25,9 +29,12 @@ public class Ejercicio {
         this.imagen = imagen;
     }
 
+     
+ 
     
-    public void generarEjercicio(){
-        
+    public void generarEjercicio(String textoEjercicio) {   
+        this.textoEjercicio=textoEjercicio;
+             
     }
        
     
