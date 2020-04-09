@@ -19,20 +19,34 @@ public class Comentario {
     private Date fechaCreacion;
     private String texto;
     private ArrayList<Voto> listaVotos = new ArrayList<>();
+    private ArrayList<Comentario> contestacionesComentarios = new ArrayList<>();
     
-    public void comentarEntrada(Entrada e){
-        
+//    public ArrayList<Entrada> comentarEntrada(ArrayList<Entrada> e, String nombreUsuario, int puntuacion, Date fechaCreacion, String texto){
+//        this.nombreUsuario = nombreUsuario;
+//        this.puntuacion = puntuacion;
+//        this.fechaCreacion = fechaCreacion;
+//        this.texto = texto;
+//        e.add();
+//        return e;
+//    }
+    
+    public Comentario(String nombreUsuario, int puntuacion, Date fechaCreacion, String texto){
+        this.nombreUsuario = nombreUsuario;
+        this.puntuacion = puntuacion;
+        this.fechaCreacion = fechaCreacion;
+        this.texto = texto;
     }
     
-    public void contestarComentario(Comentario c){
-        
+    public void contestarComentario(Comentario c, String nombreUsuario, int puntuacion, Date fechaCreacion, String texto){
+        Comentario com = new Comentario(nombreUsuario, puntuacion, fechaCreacion, texto);
+        c.contestacionesComentarios.add(com);
     }
     
     public void incrementarPuntuacion(Comentario c, Usuario u){
-        
+        c.puntuacion += 1;
     }
     
     public void decrementarPuntuacion(Comentario c, Usuario u){
-        
+        c.puntuacion -= 1;
     }
 }
