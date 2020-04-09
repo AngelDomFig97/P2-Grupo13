@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Encuesta {
     
-     private ArrayList<String> preguntasYrespuestas = new ArrayList<>(); 
+    private ArrayList<String> preguntasYrespuestas = new ArrayList<>(); 
 
     public ArrayList<String> getPreguntasYrespuestas() {
         return preguntasYrespuestas;
@@ -16,10 +16,7 @@ public class Encuesta {
     }
       
      
-     
-     
-     
-     public Encuesta generarEncuesta(){
+    public Encuesta generarEncuesta(){
          return null;
         
     }
