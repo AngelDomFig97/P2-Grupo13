@@ -1,11 +1,7 @@
-
 package Clases;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
-import sun.misc.IOUtils;
+
 
 
 public class Ejercicio {
