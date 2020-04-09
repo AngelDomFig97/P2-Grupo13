@@ -1,17 +1,12 @@
 
 package Clases;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
-import sun.misc.IOUtils;
-
 
 public class Ejercicio {
   
     private String textoEjercicio;   
-    private ArrayList<Byte> imagen = new ArrayList<Byte>();
+    private ArrayList<Byte> imagen = new ArrayList<>();
 
     public String getTextoEjercicio() {
         return textoEjercicio;
