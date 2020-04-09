@@ -37,6 +37,9 @@ public class Comentario {
         this.texto = texto;
     }
     
+    public Comentario(){    
+    }
+    
     public void contestarComentario(Comentario c, String nombreUsuario, int puntuacion, Date fechaCreacion, String texto){
         Comentario com = new Comentario(nombreUsuario, puntuacion, fechaCreacion, texto);
         c.contestacionesComentarios.add(com);
