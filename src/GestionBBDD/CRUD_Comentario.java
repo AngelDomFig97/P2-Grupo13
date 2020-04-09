@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GestionBBDD;
 
 import Clases.Comentario;
@@ -13,10 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-/**
- *
- * @author Angel Dominguez
- */
+
 public class CRUD_Comentario {
     public Boolean insertarComentario(ArrayList<Comentario> listaComentarios){
         try {
