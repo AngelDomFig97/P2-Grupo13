@@ -18,7 +18,8 @@ public class Web {
         this.mensajePopUp = mensajePopUp;
     }
     
-    public boolean registrarse (ArrayList<Usuario> listaUsuarios){
+    public boolean registrarse (ArrayList<Usuario> listaUsuarios, Usuario nuevoUser){
+        listaUsuarios.add(nuevoUser);
         CRUD_Usuario.insertUsuario(listaUsuarios);
         return true;
     }

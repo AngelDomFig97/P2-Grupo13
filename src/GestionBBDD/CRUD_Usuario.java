@@ -15,6 +15,7 @@ public class CRUD_Usuario {
             FileOutputStream file = new FileOutputStream("BaseDeDatos\\Usuarios.txt");
             try (ObjectOutputStream finalFile = new ObjectOutputStream(file)) {
                 finalFile.writeObject(listaUsuarios);
+                System.out.println("Se ha registrado correctamente.");
             }
             return true;
         } catch (IOException e){
@@ -25,12 +26,12 @@ public class CRUD_Usuario {
     }
     
     public static ArrayList<Usuario> seleccionarUsuario(){
-        ArrayList<Usuario> listaUsuarios = null;
-
-        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Usuarios.txt"); ObjectInputStream inputFile = new ObjectInputStream(file)) {
+        ArrayList<Usuario> listaUsuarios = new ArrayList<>();
+        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Usuarios.txt");) {
+            ObjectInputStream inputFile = new ObjectInputStream(file);
             listaUsuarios = (ArrayList<Usuario>) inputFile.readObject();
         }catch (IOException | ClassNotFoundException e) {
-            System.out.println(e.getMessage());
+            return listaUsuarios;
         }
         return listaUsuarios;
     }

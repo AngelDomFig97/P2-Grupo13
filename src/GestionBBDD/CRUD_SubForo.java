@@ -23,11 +23,12 @@ public class CRUD_SubForo {
     }
     
     public static ArrayList<SubForo> seleccionarSubForo(){
-        ArrayList<SubForo> listaSubForos = null;
-        try (FileInputStream file = new FileInputStream("BaseDeDatos\\SubForos.txt"); ObjectInputStream inputFile = new ObjectInputStream(file)) {
+        ArrayList<SubForo> listaSubForos = new ArrayList<>();
+        try (FileInputStream file = new FileInputStream("BaseDeDatos\\SubForos.txt")) {
+            ObjectInputStream inputFile = new ObjectInputStream(file);
             listaSubForos = (ArrayList<SubForo>) inputFile.readObject();
         }catch (IOException | ClassNotFoundException e) {
-            System.out.println(e.getMessage());
+            return listaSubForos;
         }
         return listaSubForos;
     }
