@@ -47,11 +47,6 @@ public class CRUD_SubForo {
             System.out.println(e.getMessage());
         }
         return true;
-        
-    
-    }
-    
-    public void probando() {
-        
+           
     }
 }
