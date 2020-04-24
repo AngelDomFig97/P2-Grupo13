@@ -29,5 +29,12 @@ public class Demostrador {
             System.out.println("Se ha iniciado sesion correctamente");
         else
             System.out.println("El usuario o la contraseña introducida no son correctos.");
+        
+        SubForo foro1 = new SubForo();
+        foro1.crearSubForo(listaSubForos, foro1);
+        foro1.setNombreForo("Foro de Fisica");
+        foro1.setNickCreador(userActual);
+        foro1.suscribirUsuario(usuario1);
+//        foro1.setListaUsuarios(listaUsuarios);
     }   
 }
