@@ -1,11 +1,12 @@
 package Clases;
 
 import GestionBBDD.CRUD_SubForo;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
 
-public class SubForo {
+public class SubForo implements Serializable{
     
     private String nombreForo;
     private String nickCreador;
@@ -35,6 +36,7 @@ public class SubForo {
     
     public void suscribirUsuario(Usuario u){
         listaUsuarios.add(u); 
+        System.out.println("Se ha suscrito correctamente.");
     }
 
     public String getNombreForo() {
