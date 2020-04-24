@@ -25,7 +25,7 @@ public class Web {
     }
    
     public Boolean iniciarSesion (String nick, String contraseña){
-        ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarUsuario();
+        ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarListaUsuario();
         for (Usuario usuarioActual : listaUsuarios){
             if (usuarioActual.getNick().equals(nick)){
                 if (usuarioActual.getContraseña().equals(contraseña))

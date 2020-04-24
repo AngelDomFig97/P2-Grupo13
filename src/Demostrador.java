@@ -9,8 +9,9 @@ import java.util.ArrayList;
 public class Demostrador {
 
     public static void main(String[] args) {
-        ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarUsuario();
+        ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarListaUsuario();
         ArrayList<SubForo> listaSubForos = CRUD_SubForo.seleccionarSubForo();
+        Usuario user = CRUD_Usuario.seleccionarUsuario("Alfonsot32");
         String userActual, passActual;
         userActual = "Alfonsot32";
         passActual = "transistorSalvaje";

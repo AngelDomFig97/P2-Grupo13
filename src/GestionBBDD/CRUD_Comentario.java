@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class CRUD_Comentario {
     public Boolean insertarComentario(ArrayList<Comentario> listaComentarios){
         try {
-            FileOutputStream file = new FileOutputStream("BaseDeDatos\\Comentario.txt");
+            FileOutputStream file = new FileOutputStream("BaseDeDatos\\Comentarios.txt");
             try(ObjectOutputStream finalFile = new ObjectOutputStream(file)){
                 finalFile.writeObject(listaComentarios);
             }
@@ -29,7 +29,7 @@ public class CRUD_Comentario {
     
     public ArrayList<Comentario> seleccionarComentario(Comentario coment){
         ArrayList<Comentario> listaComentarios = null;
-        try (FileInputStream file = new FileInputStream("BaseDeDatos\\SubForos.txt");
+        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Comentarios.txt");
             ObjectInputStream inputFile = new ObjectInputStream(file)) {
             listaComentarios = (ArrayList<Comentario>) inputFile.readObject();
         }catch (IOException | ClassNotFoundException e) {

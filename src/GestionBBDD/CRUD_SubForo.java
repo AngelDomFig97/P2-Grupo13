@@ -39,7 +39,7 @@ public class CRUD_SubForo {
     }
     
     public Boolean borrarSubForo(SubForo subForo){
-        ArrayList<SubForo> listaSubForos = null;
+        ArrayList<SubForo> listaSubForos;
         try (FileInputStream file = new FileInputStream("BaseDeDatos\\SubForos.txt"); ObjectInputStream inputFile = new ObjectInputStream(file)) {
             listaSubForos = (ArrayList<SubForo>) inputFile.readObject();
             for (SubForo subForoActual : listaSubForos){

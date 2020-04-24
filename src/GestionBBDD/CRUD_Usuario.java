@@ -26,7 +26,7 @@ public class CRUD_Usuario {
         return bool;
     }
     
-    public static ArrayList<Usuario> seleccionarUsuario(){
+    public static ArrayList<Usuario> seleccionarListaUsuario(){
         ArrayList<Usuario> listaUsuarios = new ArrayList<>();
         try (FileInputStream file = new FileInputStream("BaseDeDatos\\Usuarios.txt");) {
             ObjectInputStream inputFile = new ObjectInputStream(file);
@@ -45,4 +45,21 @@ public class CRUD_Usuario {
         return true;
     }
     
+    public static Usuario seleccionarUsuario(String nick){
+        Usuario user = new Usuario();
+        ArrayList<Usuario> listaUsuarios;
+        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Usuarios.txt");) {
+            ObjectInputStream inputFile = new ObjectInputStream(file);
+            listaUsuarios = (ArrayList<Usuario>) inputFile.readObject();
+            for (Usuario usuarioActual : listaUsuarios){
+                if(usuarioActual.getNick().equals(nick)){
+                    user = usuarioActual;
+                    return user;
+                }
+            }
+        }catch (IOException | ClassNotFoundException e) {
+            return user;
+        }
+        return new Usuario();
+    }
 }
