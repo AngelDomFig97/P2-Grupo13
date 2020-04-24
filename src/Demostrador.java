@@ -15,16 +15,16 @@ public class Demostrador {
         userActual = "Alfonsot32";
         passActual = "transistorSalvaje";
         Usuario usuario1 = new Usuario();
-        usuario1.setNombre("Alfonso");
-        usuario1.setApellidos("Timón");
-        usuario1.setNick("Alfonsot32");
-        usuario1.setContraseña("transistorSalvaje");
-        usuario1.setEmail("a.timon@urcj.es");
-        usuario1.setTipoUsuario("Profesor");
+        usuario1.setNombre("Angel");
+        usuario1.setApellidos("Dominguez Figueros");
+        usuario1.setNick("Gelote97");
+        usuario1.setContraseña("bocataDeAtun");
+        usuario1.setEmail("a.dominguezf.2018@alumnos.urcj.es");
+        usuario1.setTipoUsuario("Alumno");
         usuario1.setPenalizado(false);
         Web web1 = new Web();
-        web1.registrarse(listaUsuarios, usuario1);
-        Boolean inicioSesionCorrecto = web1.iniciarSesion("Gelote97", "bocataDeAtun");
+//        web1.registrarse(listaUsuarios, usuario1);
+        Boolean inicioSesionCorrecto = web1.iniciarSesion(userActual, passActual);
         if(inicioSesionCorrecto)
             System.out.println("Se ha iniciado sesion correctamente");
         else
