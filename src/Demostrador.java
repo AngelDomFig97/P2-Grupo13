@@ -34,9 +34,10 @@ public class Demostrador {
         SubForo foro1 = new SubForo();
         foro1.setNombreForo("Foro de Fisica");
         foro1.setNickCreador(userActual);
-        foro1.crearSubForo(listaSubForos, foro1);
+        if(user.getTipoUsuario().equals("Profesor"))
+            foro1.crearSubForo(listaSubForos, foro1);
+        else 
+            System.out.println("Solo los profesores pueden crear subforos.");
         foro1.suscribirUsuario(usuario1);
-//        foro1.setListaUsuarios(listaUsuarios);
-        
     }   
 }
