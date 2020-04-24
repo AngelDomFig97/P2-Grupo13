@@ -14,6 +14,7 @@ public class CRUD_SubForo {
             FileOutputStream file = new FileOutputStream("BaseDeDatos\\SubForos.txt");
             try (ObjectOutputStream finalFile = new ObjectOutputStream(file)) {
                 finalFile.writeObject(listaSubForos);
+                System.out.println("Se ha creado correctamente el subforo.");
             }
             return true;
         } catch (IOException e){
