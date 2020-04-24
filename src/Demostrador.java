@@ -39,5 +39,10 @@ public class Demostrador {
         else 
             System.out.println("Solo los profesores pueden crear subforos.");
         foro1.suscribirUsuario(usuario1);
+        listaSubForos = CRUD_SubForo.seleccionarSubForo();
+        System.out.println("Lista de foros disponibles:");
+        for (SubForo subForoActual : listaSubForos){
+            System.out.println("- " + subForoActual.getNombreForo());
+        }
     }   
 }
