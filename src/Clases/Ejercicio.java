@@ -1,10 +1,11 @@
 package Clases;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
 
-public class Ejercicio {
+public class Ejercicio implements Serializable{
   
     private String textoEjercicio;   
     private ArrayList<Byte> imagen = new ArrayList<>();

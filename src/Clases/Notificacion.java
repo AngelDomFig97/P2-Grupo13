@@ -1,9 +1,10 @@
 package Clases;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class Notificacion {
+public class Notificacion implements Serializable {
     
     private String texto ;      
     private Date fechaNotificacion;

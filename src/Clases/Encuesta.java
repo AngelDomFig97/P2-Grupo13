@@ -1,8 +1,9 @@
 package Clases;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Encuesta {
+public class Encuesta implements Serializable{
     
     private ArrayList<String> preguntasYrespuestas = new ArrayList<>(); 
 

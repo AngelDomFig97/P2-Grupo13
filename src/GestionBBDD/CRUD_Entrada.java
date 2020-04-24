@@ -9,30 +9,39 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class CRUD_Entrada {
-    public Boolean insertarEntrada(ArrayList<Entrada> listaEntradas){
-        try {
+    public static Boolean insertarEntrada(ArrayList<Entrada> listaEntradas){
+        try{
             FileOutputStream file = new FileOutputStream("BaseDeDatos\\Entradas.txt");
-            try(ObjectOutputStream finalFile = new ObjectOutputStream(file)){
+            try (ObjectOutputStream finalFile = new ObjectOutputStream(file)) {
                 finalFile.writeObject(listaEntradas);
+                System.out.println("Se ha insertado correctamente la entrada.");
             }
             return true;
         } catch (IOException e){
-            System.out.println("Ha ocurrido un error al almacenar la entrada.");
+            System.out.println("Ha habido un problema a la hora de insertar la entrada.");
         }
-        return true;
+        return null;
     }
     public Boolean actualizarEntrada(Entrada entrada){
         return true;
     }
-    public ArrayList<Entrada> seleccionarComentario(Entrada coment){
-        ArrayList<Entrada> listaComentarios = null;
+    public static ArrayList<Entrada> seleccionarEntrada(){
+        ArrayList<Entrada> listaEntradas = new ArrayList<>();
         try (FileInputStream file = new FileInputStream("BaseDeDatos\\Entradas.txt");
             ObjectInputStream inputFile = new ObjectInputStream(file)) {
-            listaComentarios = (ArrayList<Entrada>) inputFile.readObject();
+            listaEntradas = (ArrayList<Entrada>) inputFile.readObject();
         }catch (IOException | ClassNotFoundException e) {
             System.out.println(e.getMessage());
         }
-        return listaComentarios;
+        return listaEntradas;
+//        ArrayList<Entrada> listaSubForos = new ArrayList<>();
+//        try (FileInputStream file = new FileInputStream("BaseDeDatos\\SubForos.txt")) {
+//            ObjectInputStream inputFile = new ObjectInputStream(file);
+//            listaSubForos = (ArrayList<SubForo>) inputFile.readObject();
+//        }catch (IOException | ClassNotFoundException e) {
+//            return listaSubForos;
+//        }
+//        return listaSubForos;
     }
     public Boolean borrarEntrada(Entrada entrada){
         return true;

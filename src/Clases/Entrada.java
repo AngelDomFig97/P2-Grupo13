@@ -1,10 +1,12 @@
 package Clases;
 
+import GestionBBDD.CRUD_Entrada;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
 
-public class Entrada {
+public class Entrada implements Serializable{
     
     private String idEntrada,titulo,contenidoEntrada;
     private Integer puntuacion;
@@ -14,6 +16,11 @@ public class Entrada {
     private Encuesta encuesta;
     private Ejercicio ejercicio;
 
+    public void CrearEntrada (ArrayList<Entrada> listaentradas, Entrada nuevaEntrada){
+        listaentradas.add(nuevaEntrada);
+        CRUD_Entrada.insertarEntrada(listaentradas);
+    }
+    
     public String getIdEntrada() {
         return idEntrada;
     }
