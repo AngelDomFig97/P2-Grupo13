@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 
-public class CRUD_Usuario {
+public class CRUD_Usuario  {
     
     public static boolean insertUsuario(ArrayList<Usuario> listaUsuarios){
         try{

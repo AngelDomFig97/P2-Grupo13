@@ -9,6 +9,10 @@ public class Ejercicio implements Serializable{
   
     private String textoEjercicio;   
     private ArrayList<Byte> imagen = new ArrayList<>();
+    
+    public Ejercicio(String textoEjercicio){
+        this.textoEjercicio = textoEjercicio;
+    }
 
     public String getTextoEjercicio() {
         return textoEjercicio;

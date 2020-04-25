@@ -7,6 +7,10 @@ public class Encuesta implements Serializable{
     
     private ArrayList<String> preguntasYrespuestas = new ArrayList<>(); 
 
+    public Encuesta(String opciones){
+        preguntasYrespuestas.add(opciones);
+    }
+    
     public ArrayList<String> getPreguntasYrespuestas() {
         return preguntasYrespuestas;
     }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 
 public class CRUD_Comentario {
-    public Boolean insertarComentario(ArrayList<Comentario> listaComentarios){
+    public static Boolean insertarComentario(ArrayList<Comentario> listaComentarios){
         try {
             FileOutputStream file = new FileOutputStream("BaseDeDatos\\Comentarios.txt");
             try(ObjectOutputStream finalFile = new ObjectOutputStream(file)){
@@ -27,8 +27,8 @@ public class CRUD_Comentario {
         return true;
     }
     
-    public ArrayList<Comentario> seleccionarComentario(Comentario coment){
-        ArrayList<Comentario> listaComentarios = null;
+    public static ArrayList<Comentario> seleccionarComentario(){
+        ArrayList<Comentario> listaComentarios = new ArrayList<>();
         try (FileInputStream file = new FileInputStream("BaseDeDatos\\Comentarios.txt");
             ObjectInputStream inputFile = new ObjectInputStream(file)) {
             listaComentarios = (ArrayList<Comentario>) inputFile.readObject();

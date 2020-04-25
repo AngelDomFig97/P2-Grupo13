@@ -1,9 +1,12 @@
 
+import Clases.Comentario;
 import Clases.Ejercicio;
+import Clases.Encuesta;
 import Clases.Entrada;
 import Clases.SubForo;
 import Clases.Usuario;
 import Clases.Web;
+import GestionBBDD.CRUD_Comentario;
 import GestionBBDD.CRUD_Entrada;
 import GestionBBDD.CRUD_SubForo;
 import GestionBBDD.CRUD_Usuario;
@@ -17,6 +20,7 @@ public class Demostrador {
         ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarListaUsuario();
         ArrayList<SubForo> listaSubForos = CRUD_SubForo.seleccionarSubForo();
         ArrayList<Entrada> listaEntradas = CRUD_Entrada.seleccionarEntrada();
+        ArrayList<Comentario> listaComentarios = CRUD_Comentario.seleccionarComentario();
         Usuario user = CRUD_Usuario.seleccionarUsuario("Alfonsot32");
         String userActual, passActual;
         userActual = "Alfonsot32";
@@ -60,7 +64,7 @@ public class Demostrador {
         entrada1.setFechaCreacion(fecha);
         entrada1.setFechaUpdate(null);
         entrada1.setSubforo(foro1);
-        entrada1.setEjercicio(new Ejercicio());
+        entrada1.setEjercicio(new Ejercicio("1) En el siguiente circuito, utilizando el modelo de diodo con caída de voltaje constante (VƔ = 0,7V):"));
         entrada1.CrearEntrada(listaEntradas, entrada1);
         foro1.anadirEntrada(entrada1);
         
@@ -70,5 +74,46 @@ public class Demostrador {
             System.out.println("- " + EntradaActual.getTitulo());
         }
         
+        Comentario comment = new Comentario();
+        comment.setNombreUsuario(userActual);
+        comment.setTexto("Deberiais poder resolver el ejercicio en menos de media hora, habra uno similar en el examen proximo.");
+        comment.setFechaCreacion(fecha);
+        comment.setPuntuacion(0);
+        entrada1.anadirComentario(comment);
+        comment.crearComentario(listaComentarios, comment);
+        Comentario comment2 = new Comentario();
+        comment2.setNombreUsuario(usuario1.getNick());
+        comment2.setTexto("Podriamos tener una clase de resolucion de dudas antes de realizar dicho examen?");
+        comment2.setFechaCreacion(fecha);
+        comment2.setPuntuacion(0);
+        comment2.crearComentario(listaComentarios, comment2);
+        comment.addContestacionesComentarios(comment2);
+        
+        listaComentarios = CRUD_Comentario.seleccionarComentario();
+        System.out.println("Lista de comentarios en la entrada:");
+        for (Comentario comentarioActual : listaComentarios)
+            System.out.println("- " + comentarioActual.getTexto());
+        
+        Entrada entrada2 = new Entrada();
+        entrada2.setIdEntrada("6894");
+        entrada2.setTitulo("Encuesta de fecha de examen.");
+        entrada2.setSubforo(foro1);
+        entrada2.setContenidoEntrada("En la siguiente encuesta se encuentran las posibles fechas para la realizacion de vuestro proximo examen.");
+        entrada2.setPuntuacion(0);
+        entrada2.setFechaCreacion(fecha);
+        entrada2.setFechaUpdate(null);
+        entrada2.setEncuesta(new Encuesta("\"Que dia de examen prefieres:\n" +
+            "1. 23\n" +
+            "2. 21\n" +
+            "3. 12\n" +
+            "4. 19\""));
+        entrada2.CrearEntrada(listaEntradas, entrada2);
+        foro1.anadirEntrada(entrada2);
+        
+        listaEntradas = CRUD_Entrada.seleccionarEntrada();
+        System.out.println("Lista de entradas en el subforo: ");
+        for (Entrada EntradaActual : listaEntradas){
+            System.out.println("- " + EntradaActual.getTitulo());
+        }
     }   
 }
