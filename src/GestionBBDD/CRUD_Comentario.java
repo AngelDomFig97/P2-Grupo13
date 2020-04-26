@@ -29,11 +29,11 @@ public class CRUD_Comentario {
     
     public static ArrayList<Comentario> seleccionarComentario(){
         ArrayList<Comentario> listaComentarios = new ArrayList<>();
-        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Comentarios.txt");
-            ObjectInputStream inputFile = new ObjectInputStream(file)) {
+        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Comentarios.txt")) {
+            ObjectInputStream inputFile = new ObjectInputStream(file);
             listaComentarios = (ArrayList<Comentario>) inputFile.readObject();
         }catch (IOException | ClassNotFoundException e) {
-            System.out.println(e.getMessage());
+            return listaComentarios;
         }
         return listaComentarios;
     }

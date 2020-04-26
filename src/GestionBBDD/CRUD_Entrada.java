@@ -27,21 +27,13 @@ public class CRUD_Entrada {
     }
     public static ArrayList<Entrada> seleccionarEntrada(){
         ArrayList<Entrada> listaEntradas = new ArrayList<>();
-        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Entradas.txt");
-            ObjectInputStream inputFile = new ObjectInputStream(file)) {
+        try (FileInputStream file = new FileInputStream("BaseDeDatos\\Entradas.txt")) {
+            ObjectInputStream inputFile = new ObjectInputStream(file);
             listaEntradas = (ArrayList<Entrada>) inputFile.readObject();
         }catch (IOException | ClassNotFoundException e) {
-            System.out.println(e.getMessage());
+            return listaEntradas;
         }
         return listaEntradas;
-//        ArrayList<Entrada> listaSubForos = new ArrayList<>();
-//        try (FileInputStream file = new FileInputStream("BaseDeDatos\\SubForos.txt")) {
-//            ObjectInputStream inputFile = new ObjectInputStream(file);
-//            listaSubForos = (ArrayList<SubForo>) inputFile.readObject();
-//        }catch (IOException | ClassNotFoundException e) {
-//            return listaSubForos;
-//        }
-//        return listaSubForos;
     }
     public Boolean borrarEntrada(Entrada entrada){
         return true;

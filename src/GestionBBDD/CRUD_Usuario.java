@@ -22,8 +22,7 @@ public class CRUD_Usuario  {
         } catch (IOException e){
             System.out.println("Ha habido un problema a la hora de dar de alta el usuario.");
         }
-        boolean bool = true;
-        return bool;
+        return true;
     }
     
     public static ArrayList<Usuario> seleccionarListaUsuario(){

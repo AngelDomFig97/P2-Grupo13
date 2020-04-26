@@ -41,7 +41,7 @@ public class Web {
         return new Entrada();
     }
     
-    public void mostrarPopUp (String mensaje){
-        
+    public void mostrarPopUp (Notificacion mensaje){
+        System.out.println(mensaje.getTexto());
     }
 }

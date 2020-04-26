@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-
+//Clase que representa el subForo
 public class SubForo implements Serializable{
     
     private String nombreForo;
@@ -20,6 +20,7 @@ public class SubForo implements Serializable{
         return true;
     }
     
+    //Metodo para crear una notificacion de que se ha creado una nueva entrada
     public Notificacion crearNotificacion(Entrada id, SubForo subf, String texto, Date fecha){
         Notificacion n = new Notificacion(texto, fecha, subf, id);
         return n;
@@ -36,7 +37,7 @@ public class SubForo implements Serializable{
     
     public void suscribirUsuario(Usuario u){
         listaUsuarios.add(u); 
-        System.out.println("Se ha suscrito correctamente.");
+        System.out.println("Se ha suscrito correctamente el usuario con nick " + u.getNick());
     }
 
     public String getNombreForo() {
