@@ -22,6 +22,12 @@ public class ComentarioTest {
      */
     @Test
     public void testIncrementarPuntuacion() {
+        int puntuacion = 1;
+        Comentario pruebaComentario = new Comentario();
+        Usuario user = new Usuario();
+        pruebaComentario.incrementarPuntuacion(pruebaComentario, user);
+        int puntuacionComment = pruebaComentario.getPuntuacion();
+        assertEquals(puntuacion, puntuacionComment);
     }
 
     /**
