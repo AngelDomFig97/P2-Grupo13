@@ -28,7 +28,7 @@ public class Demostrador {
         usuario1.setNombre("Angel");
         usuario1.setApellidos("Dominguez Figueros");
         usuario1.setNick("Gelote97");
-        usuario1.setContraseña("bocataDeAtun");
+        usuario1.setContrasena("bocataDeAtun");
         usuario1.setEmail("a.dominguezf.2018@alumnos.urcj.es");
         usuario1.setTipoUsuario("Alumno");
         usuario1.setPenalizado(false);
@@ -39,21 +39,21 @@ public class Demostrador {
         usuario2.setNombre("Alfonso");
         usuario2.setApellidos("Timón");
         usuario2.setNick("Alfonsot32");
-        usuario2.setContraseña("transistorSalvaje");
+        usuario2.setContrasena("transistorSalvaje");
         usuario2.setEmail("a.timon@urcj.es");
         usuario2.setTipoUsuario("Profesor");
         usuario2.setPenalizado(false);
         web1.registrarse(listaUsuarios, usuario2);
-        //Estos seran el nick y la contraseña de usuario que va a estar logeado
+        //Estos seran el nick y la contrasena de usuario que va a estar logeado
         Usuario user = CRUD_Usuario.seleccionarUsuario("Alfonsot32");
         userActual = user.getNick();
-        passActual = user.getContraseña();
+        passActual = user.getContrasena();
         //Comprobamos si el inicio de sesion es correcto
         Boolean inicioSesionCorrecto = web1.iniciarSesion(userActual, passActual);
         if(inicioSesionCorrecto)
             System.out.println("Se ha iniciado sesion correctamente con el nick " + userActual);
         else
-            System.out.println("El usuario o la contraseña introducida no son correctos.");
+            System.out.println("El usuario o la contrasena introducida no son correctos.");
         //Aqui se creara un nuevo subForo
         SubForo foro1 = new SubForo();
         foro1.setNombreForo("Foro de Fisica");
@@ -127,16 +127,16 @@ public class Demostrador {
         entrada2.CrearEntrada(listaEntradas, entrada2);
         foro1.anadirEntrada(entrada2);
         Notificacion notify = foro1.crearNotificacion(entrada2, foro1, "Se ha creado una entrada en el subforo " + foro1.getNombreForo(), fecha);
-        //Estos seran el nick y la contraseña de usuario que va a estar logeado
+        //Estos seran el nick y la contrasena de usuario que va a estar logeado
         user = CRUD_Usuario.seleccionarUsuario("Gelote97");
         userActual = user.getNick();
-        passActual = user.getContraseña();
+        passActual = user.getContrasena();
         //Iniciamos sesion con un alumno suscrito al foro para que reciba la notificacion de la creacion de la entrada
         inicioSesionCorrecto = web1.iniciarSesion(userActual, passActual);
         if(inicioSesionCorrecto)
             System.out.println("Se ha iniciado sesion correctamente con el nick " + userActual);
         else
-            System.out.println("El usuario o la contraseña introducida no son correctos.");
+            System.out.println("El usuario o la contrasena introducida no son correctos.");
         for (Usuario userSuscrito : foro1.getListaUsuarios()){
             if (userSuscrito.getNick().equals(userActual))
                 web1.mostrarPopUp(notify);

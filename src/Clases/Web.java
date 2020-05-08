@@ -24,11 +24,11 @@ public class Web {
         return true;
     }
    
-    public Boolean iniciarSesion (String nick, String contraseña){
+    public Boolean iniciarSesion (String nick, String contrasena){
         ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarListaUsuario();
         for (Usuario usuarioActual : listaUsuarios){
             if (usuarioActual.getNick().equals(nick)){
-                if (usuarioActual.getContraseña().equals(contraseña))
+                if (usuarioActual.getContrasena().equals(contrasena))
                     return true;
                 else 
                     return false;
