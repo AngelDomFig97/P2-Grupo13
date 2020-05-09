@@ -45,8 +45,13 @@ public class CRUD_UsuarioTest {
     /**
      * Test of seleccionarUsuario method, of class CRUD_Usuario.
      */
+//    Para que esta prueba funcione debe haber algun usuario en la base datos.
     @Test
     public void testSeleccionarUsuario() {
+        String usuario = "Gelote97";
+        Usuario usuarioDevuelto = CRUD_Usuario.seleccionarUsuario(usuario);
+        String resultado = usuarioDevuelto.getNick();
+        assertEquals(usuario, resultado);
     }
     
 }
