@@ -28,17 +28,10 @@ public class Web {
         ArrayList<Usuario> listaUsuarios = CRUD_Usuario.seleccionarListaUsuario();
         for (Usuario usuarioActual : listaUsuarios){
             if (usuarioActual.getNick().equals(nick)){
-                if (usuarioActual.getContrasena().equals(contrasena))
-                    return true;
-                else 
-                    return false;
+                return usuarioActual.getContrasena().equals(contrasena);
             }
         }   
         return false;
-    }
-    
-    public Entrada mostrarEntradasPopulares (){
-        return new Entrada();
     }
     
     public void mostrarPopUp (Notificacion mensaje){
