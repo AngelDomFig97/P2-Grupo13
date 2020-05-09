@@ -1,5 +1,9 @@
-package Clases;
+package Clases_Tests;
 
+import Clases.Entrada;
+import Clases.Notificacion;
+import Clases.SubForo;
+import Clases.Usuario;
 import java.util.ArrayList;
 import java.util.Date;
 import org.junit.Test;
@@ -27,6 +31,7 @@ public class SubForoTest {
     
     //vistoBueno No se va a realizar una prueba de este metodo porque solo hace un return true
     //CrearSubforo no se va a realizar una prueba de este metodo puesto que es un void y no devuelve nada, se probara el metodo insertarSubForo
+    
     @Test
     public void testCrearSubForo() {
         SubForo sfEnt = new SubForo();

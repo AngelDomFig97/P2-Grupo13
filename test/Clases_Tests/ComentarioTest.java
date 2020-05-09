@@ -1,26 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Clases;
+package Clases_Tests;
 
+import Clases.Comentario;
+import Clases.Usuario;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Bugat
- */
 public class ComentarioTest {
     
     public ComentarioTest() {
     }
     
-    /**
-     * Test of addContestacionesComentarios method, of class Comentario.
-     */
     @Test
     public void testAddContestacionesComentarios() {
         ArrayList<Comentario> lista = new ArrayList<>();
@@ -30,10 +20,7 @@ public class ComentarioTest {
         ArrayList<Comentario> resultado = c.getContestacionesComentarios();
         assertEquals(lista.size(), resultado.size());
     }
-    
-    /**
-     * Test of incrementarPuntuacion method, of class Comentario.
-     */
+
     @Test
     public void testIncrementarPuntuacion() {
         int puntuacion = 6;
@@ -45,9 +32,6 @@ public class ComentarioTest {
         assertEquals(puntuacion, puntuacionComment);
     }
 
-    /**
-     * Test of decrementarPuntuacion method, of class Comentario.
-     */
     @Test
     public void testDecrementarPuntuacion() {
         int puntuacion = 4;
@@ -59,9 +43,6 @@ public class ComentarioTest {
         assertEquals(puntuacion, puntuacionComment);
     }
 
-    /**
-     * Test of crearComentario method, of class Comentario.
-     */
     @Test
     public void testCrearComentario() {
         

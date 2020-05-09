@@ -1,5 +1,6 @@
-package Clases;
+package Clases_Tests;
 
+import Clases.Ejercicio;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
