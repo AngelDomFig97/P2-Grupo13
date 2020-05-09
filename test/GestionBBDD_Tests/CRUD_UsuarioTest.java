@@ -5,6 +5,9 @@
  */
 package GestionBBDD_Tests;
 
+import Clases.Usuario;
+import GestionBBDD.CRUD_Usuario;
+import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,7 +25,10 @@ public class CRUD_UsuarioTest {
      */
     @Test
     public void testInsertUsuario() {
-        
+        ArrayList<Usuario> listaUsuariosEsperada = CRUD_Usuario.seleccionarListaUsuario();
+        CRUD_Usuario.insertUsuario(listaUsuariosEsperada);
+        ArrayList<Usuario> listaUsuariosResultado = CRUD_Usuario.seleccionarListaUsuario();
+        assertEquals(listaUsuariosEsperada.size(), listaUsuariosResultado.size());
     }
 
     /**
@@ -30,20 +36,10 @@ public class CRUD_UsuarioTest {
      */
     @Test
     public void testSeleccionarListaUsuario() {
-    }
-
-    /**
-     * Test of updateUsuario method, of class CRUD_Usuario.
-     */
-    @Test
-    public void testUpdateUsuario() {
-    }
-
-    /**
-     * Test of deleteUsuario method, of class CRUD_Usuario.
-     */
-    @Test
-    public void testDeleteUsuario() {
+        ArrayList<Usuario> listaUsuariosEsperada = CRUD_Usuario.seleccionarListaUsuario();
+        CRUD_Usuario.insertUsuario(listaUsuariosEsperada);
+        ArrayList<Usuario> listaUsuariosResultado = CRUD_Usuario.seleccionarListaUsuario();
+        assertEquals(listaUsuariosEsperada.size(), listaUsuariosResultado.size());
     }
 
     /**
