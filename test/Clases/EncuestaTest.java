@@ -35,7 +35,7 @@ public class EncuestaTest {
     @Test
     public void testSetPreguntasYrespuestas() {
         ArrayList<String> esperado = new ArrayList<>();
-        String esp = "Probando el getPreguntasYrespuestas desde jUnit.";
+        String esp = "Probando el setPreguntasYrespuestas desde jUnit.";
         esperado.add(esp);
         Encuesta encPrueba = new Encuesta("Empezamos con un texto que no es el esperado.");
         encPrueba.setPreguntasYrespuestas(esperado);
@@ -44,11 +44,4 @@ public class EncuestaTest {
         assertEquals(esperado, resultado);
     }
 
-    /**
-     * Test of generarEncuesta method, of class Encuesta.
-     */
-    @Test
-    public void testGenerarEncuesta() {
-    }
-    
 }

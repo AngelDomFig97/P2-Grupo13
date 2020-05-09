@@ -17,15 +17,6 @@ public class Encuesta implements Serializable{
 
     public void setPreguntasYrespuestas(ArrayList<String> preguntasYrespuestas) {
         this.preguntasYrespuestas = preguntasYrespuestas;
-    }
-      
-     
-    public Encuesta generarEncuesta(){
-         return null;
-        
-    }
-      
-    
-    
+    }   
     
 }
