@@ -20,7 +20,7 @@ public class CRUD_SubForo {
         } catch (IOException e){
             System.out.println("Ha habido un problema a la hora de dar de alta el subForo.");
         }
-        return null;
+        return false;
     }
     
     public static ArrayList<SubForo> seleccionarSubForo(){
