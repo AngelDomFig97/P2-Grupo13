@@ -5,6 +5,7 @@
  */
 package Clases;
 
+import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -16,15 +17,30 @@ public class ComentarioTest {
     
     public ComentarioTest() {
     }
-
+    
+    /**
+     * Test of addContestacionesComentarios method, of class Comentario.
+     */
+    @Test
+    public void testAddContestacionesComentarios() {
+    }
+    
+    /**
+     * Test of contestarComentario method, of class Comentario.
+     */
+    @Test
+    public void testContestarComentario() {
+    }
+    
     /**
      * Test of incrementarPuntuacion method, of class Comentario.
      */
     @Test
     public void testIncrementarPuntuacion() {
-        int puntuacion = 1;
+        int puntuacion = 6;
         Comentario pruebaComentario = new Comentario();
         Usuario user = new Usuario();
+        pruebaComentario.setPuntuacion(5);
         pruebaComentario.incrementarPuntuacion(pruebaComentario, user);
         int puntuacionComment = pruebaComentario.getPuntuacion();
         assertEquals(puntuacion, puntuacionComment);
@@ -35,6 +51,13 @@ public class ComentarioTest {
      */
     @Test
     public void testDecrementarPuntuacion() {
+        int puntuacion = 4;
+        Comentario pruebaComentario = new Comentario();
+        Usuario user = new Usuario();
+        pruebaComentario.setPuntuacion(5);
+        pruebaComentario.decrementarPuntuacion(pruebaComentario, user);
+        int puntuacionComment = pruebaComentario.getPuntuacion();
+        assertEquals(puntuacion, puntuacionComment);
     }
 
     /**
@@ -42,6 +65,7 @@ public class ComentarioTest {
      */
     @Test
     public void testCrearComentario() {
+        
     }
     
 }
