@@ -23,13 +23,12 @@ public class ComentarioTest {
      */
     @Test
     public void testAddContestacionesComentarios() {
-    }
-    
-    /**
-     * Test of contestarComentario method, of class Comentario.
-     */
-    @Test
-    public void testContestarComentario() {
+        ArrayList<Comentario> lista = new ArrayList<>();
+        lista.add(new Comentario());
+        Comentario c = new Comentario();
+        c.addContestacionesComentarios(new Comentario());
+        ArrayList<Comentario> resultado = c.getContestacionesComentarios();
+        assertEquals(lista.size(), resultado.size());
     }
     
     /**
