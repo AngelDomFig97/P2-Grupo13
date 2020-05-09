@@ -20,7 +20,7 @@ public class CRUD_Comentario {
         } catch (IOException e){
             System.out.println("Ha ocurrido un error al almacenar los comentarios.");
         }
-        return true;
+        return false;
     }
     
     public Boolean actualizarComentario(Comentario coment){

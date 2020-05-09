@@ -20,7 +20,7 @@ public class CRUD_Entrada {
         } catch (IOException e){
             System.out.println("Ha habido un problema a la hora de insertar la entrada.");
         }
-        return null;
+        return false;
     }
     public Boolean actualizarEntrada(Entrada entrada){
         return true;

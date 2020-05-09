@@ -15,6 +15,12 @@ public class SubForo implements Serializable{
     
     public SubForo(){
     }
+    public SubForo(String nombreForo, String nickCreador, ArrayList<Entrada> listaEntradas, ArrayList<Usuario> listaUsuarios){
+        this.nombreForo = nombreForo;
+        this.nickCreador = nickCreador;
+        this.listaEntradas = listaEntradas;
+        this.listaUsuarios = listaUsuarios;
+    }
     
     public boolean vistoBueno(Entrada nuevaEntrada){
         return true;

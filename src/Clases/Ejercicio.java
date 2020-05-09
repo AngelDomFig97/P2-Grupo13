@@ -16,9 +16,5 @@ public class Ejercicio implements Serializable{
 
     public void setTextoEjercicio(String textoEjercicio) {
         this.textoEjercicio = textoEjercicio;
-    }
-
-    public void generarEjercicio(String textoEjercicio) {   
-        this.textoEjercicio=textoEjercicio;         
-    }       
+    }    
 }
