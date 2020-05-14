@@ -33,7 +33,7 @@ public class SubForoTest {
     //CrearSubforo no se va a realizar una prueba de este metodo puesto que es un void y no devuelve nada, se probara el metodo insertarSubForo
     
     @Test
-    public void testCrearSubForo() {
+    public void testAnadirEntrada() {
         SubForo sfEnt = new SubForo();
         ArrayList<Entrada> listaEntradas;
         listaEntradas = sfEnt.getListaEntradas();
