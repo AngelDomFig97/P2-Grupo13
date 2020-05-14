@@ -45,7 +45,11 @@ public class ComentarioTest {
 
     @Test
     public void testCrearComentario() {
-        
+        Comentario comment = new Comentario();
+        ArrayList<Comentario> listaComentarios;
+        listaComentarios = comment.getContestacionesComentarios();
+        comment.crearComentario(listaComentarios, comment);
+        assertEquals(listaComentarios.size(), comment.getContestacionesComentarios().size());
     }
     
 }
